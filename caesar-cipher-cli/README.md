@@ -5,6 +5,7 @@
 ## Установка
 
 npm:
+
 `git clone https://github.com/uaolmer/nodejs-course.git`
 
 `cd caesar-sipher-cli`
@@ -16,13 +17,13 @@ npm:
 
 CLI утилита должна принимать 4 параметра:
 
--s, --shift: сдвиг по шифру
+`-s, --shift`: сдвиг по шифру
 
--i, --input: файл чтения
+`-i, --input`: файл чтения
 
--o, --output: файл записи
+`-o, --output`: файл записи
 
--a, --action: кодирование/декодирование (encode/decode)
+`-a, --action`: кодирование/декодирование (encode/decode)
 
 Параметры action и shift являются обязательными.
 
@@ -30,11 +31,11 @@ CLI утилита должна принимать 4 параметра:
 
 Для чтения и запись в файл:
 
-$ node caesar-cli -a encode -s 7 -i "./input.txt" -o "./output.txt"
+`$ node caesar-cli -a encode -s 7 -i "./input.txt" -o "./output.txt"`
 
-$ node caesar-cli --action encode --shift 7 --input plain.txt --output encoded.txt
+`$ node caesar-cli --action encode --shift 7 --input plain.txt --output encoded.txt`
 
-$ node caesar-cli --action decode --shift 7 --input decoded.txt --output plain.txt
+`$ node caesar-cli --action decode --shift 7 --input decoded.txt --output plain.txt`
 
 Для работы с консолью:
 
