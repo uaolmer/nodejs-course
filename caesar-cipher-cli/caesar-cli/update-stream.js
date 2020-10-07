@@ -7,12 +7,16 @@ const errorHandler = require('./errorHandler');
 const updateStream = {
     read: input => {
         if (input) {
-            const file = path.resolve(input);
-            return fs.createReadStream(file, 'utf-8');
-        } else
-            errorHandler('Input file does not exist', 9);
+            const filePath = path.resolve(input);
+            const readStream = fs.createReadStream(filePath, 'utf-8');
 
-        return process.stdin;
+            readStream.on('error', function(error) {
+                errorHandler('Input file doesn\'t exist', 9);
+            });
+
+            return readStream;
+        } else
+            return process.stdin;
     },
     transform: (shift, action) => {
         return new Transform ({
@@ -25,13 +29,16 @@ const updateStream = {
     },
     write: output => {
         if (output) {
-            const file = path.resolve(output);
-            if (fs.existsSync(output))
-                return fs.createWriteStream(file, {flags: 'a'});
-        } else
-            errorHandler("Output file does not exist", 9);
+            const filePath = path.resolve(output);
+            const writeStream = fs.createWriteStream(filePath, {flags: 'a'});
 
-        return process.stdout;
+            writeStream.on('error', function(error) {
+                errorHandler('Output file doesn\'t exist', 9);
+            });
+
+            return writeStream;
+        } else
+            return process.stdout;
     }
 }
 

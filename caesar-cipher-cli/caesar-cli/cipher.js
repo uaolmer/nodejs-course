@@ -21,9 +21,9 @@ const cipher = {
                 return cipher.base[index];
             }
             if (cipher.base.toUpperCase().includes(char)) {
-                let index = (cipher.base.indexOf(char) + shift) % cipher.base.length;
-                index = index < 0 ? cipher.base.toUpperCase().length + index : index;
-                return cipher.base[index];
+                let index = (cipher.base.toUpperCase().indexOf(char) + shift) % cipher.base.length;
+                index = index < 0 ? cipher.base.length + index : index;
+                return cipher.base.toUpperCase()[index];
             }
             return char;
         }).join('');
