@@ -39,4 +39,4 @@ CLI утилита должна принимать 4 параметра:
 
 Для работы с консолью:
 
-$ node caesar-cli -a encode -s 7
+`$ node caesar-cli -a encode -s 7`
