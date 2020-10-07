@@ -13,10 +13,10 @@ npm:
 
 CLI утилита должна принимать 4 параметра:
 
--s, --shift: a shift
--i, --input: an input file
--o, --output: an output file
--a, --action: an action encode/decode
+-s, --shift: сдвиг по шифру
+-i, --input: файл чтения
+-o, --output: файл записи
+-a, --action: кодирование/декодирование (encode/decode)
 
 Параметры action и shift являются обязательными.
 
