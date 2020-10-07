@@ -4,7 +4,10 @@
 
 ## Установка
 
-
+npm:
+`git clone https://github.com/uaolmer/nodejs-course.git`
+`cd caesar-sipher-cli`
+`npm install`
 
 ## Использование
 
@@ -26,4 +29,5 @@ $ node caesar-cli --action encode --shift 7 --input plain.txt --output encoded.t
 $ node caesar-cli --action decode --shift 7 --input decoded.txt --output plain.txt
 
 Для работы с консолью:
+
 $ node caesar-cli -a encode -s 7
