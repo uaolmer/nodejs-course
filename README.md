@@ -1,2 +1,2 @@
 # nodejs-course
-Задачи курса Node.js от Rolling Scopes School
+Здесь студент uaolmer решает задачи по Node.js от Rolling Scopes School. Ничего интересного
